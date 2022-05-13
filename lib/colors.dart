@@ -7,3 +7,5 @@ const teal = Color(0xff45bad1);
 const red = Color(0xffd12871);
 const textcolor = Color(0xff302d2f);
 const textcolorLight = Color(0xff5c595b);
+
+const rupees = '\u{20B9}';

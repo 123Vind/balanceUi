@@ -1,6 +1,7 @@
 import 'package:balanceui/balanceui.dart';
 import 'package:balanceui/colors.dart';
 import 'package:flutter/material.dart';
+import 'newui/cardshome.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,6 +15,42 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: bgColor,
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        items: const [
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+                color: purple,
+                size: 30,
+              ),
+              label: 'Home'),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.grade_outlined,
+                color: Colors.black,
+                size: 30,
+              ),
+              label: 'Graph'),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.notifications_outlined,
+                color: Colors.black,
+                size: 30,
+              ),
+              label: 'Notifications'),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person_outline,
+              color: Colors.black,
+              size: 30,
+            ),
+            label: 'Person',
+          ),
+        ],
+      ),
       appBar: AppBar(
         toolbarHeight: 80,
         elevation: 0,
@@ -51,18 +88,23 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-        actions: const [
-          Padding(
-            padding: const EdgeInsets.all(16),
-            child: Icon(
-              Icons.add,
-              color: purple,
-              size: 30,
+        actions: [
+          InkWell(
+            onTap:(){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>cardHome()));
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Icon(
+                Icons.add,
+                color: purple,
+                size: 30,
+              ),
             ),
           )
         ],
       ),
-      body: balanceui(),
+      body: const balanceui(),
     );
   }
 }
