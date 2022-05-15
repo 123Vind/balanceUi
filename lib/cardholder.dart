@@ -15,7 +15,7 @@ class _cardholderState extends State<cardholder> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      margin: EdgeInsets.all(16),
+      margin: EdgeInsets.symmetric(horizontal: 4,vertical: 16),
       decoration: BoxDecoration(
           color: widget.color,
           borderRadius: BorderRadius.circular(16),
@@ -84,7 +84,10 @@ class _cardholderState extends State<cardholder> {
                         ],
                       ),
                     ),
-                    Padding(
+                   
+                  ],
+                ),
+                 Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -94,8 +97,6 @@ class _cardholderState extends State<cardholder> {
                         ],
                       ),
                     )
-                  ],
-                )
               ],
             ),
           )

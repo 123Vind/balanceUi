@@ -2,8 +2,7 @@ import 'package:balanceui/page1.dart';
 import 'package:balanceui/pagetwo.dart';
 import 'package:flutter/material.dart';
 
-
-class balanceui extends StatefulWidget {
+int activeIndex = 0;class balanceui extends StatefulWidget {
   const balanceui({ Key? key }) : super(key: key);
 
   @override
